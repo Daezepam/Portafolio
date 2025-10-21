@@ -1,0 +1,178 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.5;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Banner full-width */
+.banner {
+  width: 100vw;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #111;
+  margin: 0;
+  margin-top: -2rem;
+}
+
+/* BLOQUES INICIALES Y SECCIONES */
+.newspaper, .westshop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  gap: 1rem;
+  padding: 2rem;
+  grid-auto-flow: dense;
+}
+
+.block {
+  background-color: #000;
+  color: white;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.block img {
+  width: 100%;       /* ancho completo del bloque */
+  height: auto;      /* altura proporcional */
+  object-fit: contain; /* mantiene toda la imagen dentro del bloque */
+  display: block;
+  margin: 0;
+  border-radius: 8px; /* opcional, para suavizar los bordes */
+}
+
+/* si querés limitar altura máxima */
+.block-image img {
+  max-height: 300px; /* ajusta según convenga */
+}
+
+
+.block-text {
+  grid-row: span 2;
+}
+
+.block-image:nth-child(2) {
+  grid-column: span 2;
+}
+
+.block-image:nth-child(5) {
+  grid-row: span 2;
+}
+
+/* TITULOS */
+.block-title {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 3rem 0 1rem 0;
+}
+
+.block-title h2 {
+  color: #fff;
+  text-shadow:
+    0 0 5px #ff9ef0,
+    0 0 10px #ff9ef0,
+    0 0 15px #ff9ef0,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #ff9ef0;
+  font-size: 2rem;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 3px solid #111;
+  font-size: 0.9rem;
+}
+
+.ahref-footer {
+  color: white;
+  font-weight: bold;
+}
+
+/* H2 GLOW */
+h2 {
+  color: #fff;
+  text-shadow:
+    0 0 5px #ff9ef0,
+    0 0 10px #ff9ef0,
+    0 0 15px #ff9ef0,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #ff9ef0;
+  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.westshop h2 {
+  color: #ffffff; /* ejemplo: dorado */
+  text-shadow:
+    0 0 5px #ffd700,
+    0 0 10px #ffd700,
+    0 0 15px #ff8c00,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #ff8c00;
+  margin-left: 0; /* opcional, si querés centrarlo */
+  text-align: center;
+}
+
+/* --- WEST SHOP ESTILO BLOQUES --- */
+.westshop .block-text, .westshop .block-image {
+  grid-row: span 2;
+}
+
+.westshop .ws-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.westshop .ws-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.westshop .block-image-large {
+  max-height: 500px;
+  grid-column: span 2; /* ocupa el ancho de 2 columnas */
+  grid-row: auto;       /* altura automática según contenido */
+}
+
+.westshop .block-image img {
+  width: 100%;
+  height: auto;        /* evita cortar la imagen */
+  object-fit: contain;  /* ajusta la imagen dentro del bloque sin recortar */
+  display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .newspaper, .westshop {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+  .block-text, .block-image {
+    grid-row: auto !important;
+    grid-column: auto !important;
+  }
+}
