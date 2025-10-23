@@ -30,22 +30,16 @@
 
       <div class="block block-image"><img src="img/d4.jpg"></div>
       <div class="block block-image"><img src="img/d2.jpg"></div>
-      <div class="block block-text">
-        <p>
-          Me gusta experimentar con diferentes estilos.<br>
-          Dibujo en tradicional con distintas técnicas y estilos.<br>
-          Hago renders 3D.<br>
-          Amante de la suite de Adobe.
-        </p>
+      <div class="block block-image"><img src="img/x1.gif" loading="lazy"></div>
+  
       </div>
       <div class="block block-image"><img src="img/d66.png" loading="lazy"></div>
       <div class="block block-image"><img src="img/a44.png" loading="lazy"></div>
       <div class="block block-image"><img src="img/a5.jpeg"></div>
       <div class="block block-image"><img src="img/d7.jpg"></div>
-      <div class="block block-image"><img src="img/x1.gif" loading="lazy"></div>
     </section> 
 
-    <section class="westshop">
+    <section class="westshop"> <!-- WESSST SHOOOP -->
       <div class="block block-text">
         <h2>W e s t    S h o p</h2>
         <p>
@@ -59,13 +53,6 @@
         <img src="img/w5.png" loading="lazy">
       </div>
 
-      <div class="block block-text">
-        <p>
-          Usé <b>Photoshop</b> e <b>Illustrator</b> para los diseños.<br><br>
-          Los renders 3D fueron hechos en <b>Blender</b>.
-        </p>
-      </div>
-
       <div class="block block-image"><img src="img/w2.jpg" loading="lazy"></div>
       <div class="block block-image"><img src="img/w7.png" loading="lazy"></div>
       <div class="block block-image"><img src="img/w8.png"></div>
@@ -73,11 +60,20 @@
       <div class="block block-image"><img src="img/w9.png"></div>
       <div class="block block-image"><img src="img/w4.png" loading="lazy"></div>
       <div class="block block-image"><img src="img/w6.png"></div>
-      <div class="block block-image"><img src="img/w1.jpg"></div>
-    </section> <!-- cierre wshop -->
+    </section> 
 
+    <section class="carrusel"> <!-- Banners  -->
+        <div class="slides">
+            <h2>Banners de  <i class="fab fa-twitch"></i> Twitch</h2>
+            <img src="img/b1.png">
+            <img src="img/b2.png">
+            <img src="img/b3.jpg">
+            <img src="img/b4.jpg">
+        </div>
+            <button class="Anterior">&#10094;</button>
+            <button class="Siguiente">&#10095;</button>
+    </section>
 
-  </section> 
 
   <footer>
     <a href="https://x.com/daeddzepam" target="_blank" class="ahref-footer">
@@ -89,9 +85,15 @@
     <a href="https://discord.com/users/daezepamx" target="_blank" class="ahref-footer">
         <i class="fab fa-discord"></i> daezepamx
     </a> |
-    
   </footer>
 
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+  <div id="caption"></div>
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
